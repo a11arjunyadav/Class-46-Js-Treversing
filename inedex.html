@@ -3,9 +3,114 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JS Treversing</title>
+        <title>JS Traversing</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <style>
+
+        </style>
+        <script>
+
+        </script>
     </head>
     <body>
-        
+        <table class="table w-50 offset-3 mt-5">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Student Name</th>
+                    <th>Student Surname</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Arjun</td>
+                    <td>Yadav</td>
+                    <td>
+                        <button class="btn btn-success" onclick=" anil () ">View</button>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Rakesh</td>
+                    <td>Yadav</td>
+                    <td>
+                        <button class="btn btn-success a-viewbtn" onclick=" anil (this) ">View</button>
+                        <button class="btn btn-primary a-viewbtn">Edit</button>
+                        <button class="btn btn-danger a-viewbtn">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Rajesh</td>
+                    <td>Yadhuvanshi</td>
+                    <td>
+                        <button class="btn btn-success">View</button>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Pyarelal</td>
+                    <td>Yadav</td>
+                    <td>
+                        <button class="btn btn-success">View</button>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Surendra</td>
+                    <td>Dongre</td>
+                    <td>
+                        <button class="btn btn-success">View</button>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Sheela</td>
+                    <td>Jawalkar</td>
+                    <td>
+                        <button class="btn btn-success">View</button>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Ashwin</td>
+                    <td>Potphode</td>
+                    <td>
+                        <button class="btn btn-success">View</button>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script>
+            let anil=()=>{
+                console.log("ok",e.target.closest('tr').querySelector('td:nth-child'));
+            }
+
+            //element.addEventListener(event, function, useCapture);
+
+            //element = document.querySelector(selector);
+            console.log(document.querySelector("button.a-viewbtn"))
+            document.addEventListener('click', (e)=>{ //e is a formal argument
+                console.log(e.target.closest('tr').querySelector('td:nth-child(2)').innerHTML);
+                //object.member
+            })
+
+
+        </script>
     </body>
 </html>
